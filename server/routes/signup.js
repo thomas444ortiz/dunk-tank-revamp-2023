@@ -37,6 +37,5 @@ router.delete('/',
     }
 );
 
-
 //export all the routes defined above to the server.js file where they are consolidated
 module.exports = router;
