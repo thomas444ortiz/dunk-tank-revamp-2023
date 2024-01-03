@@ -7,10 +7,11 @@ module.exports = {
     output: { 
         path: path.resolve(__dirname, 'build'), //this code tells you to put the file in the build folder
         filename: 'bundle.js', //and name the filename bundle.js
-        publicPath: '/build/', //specifies the base path for all assets in the application
+        publicPath: '/build/', //specifies the base path for all assets in the application (previously /build/)
     },
 
-    mode: 'production', 
+    mode: 'development', //changed from production to development
+    //mode: 'production', //changed from production to development
     module:{
       rules: [
         {
@@ -36,5 +37,11 @@ module.exports = {
           ],
         }
       ],
-    }
+    },
+    devServer: { //configures some settings for the dev server
+      static: {
+        directory: path.join(__dirname), //pulls all the info from the main directory (instead of build directory) for dev server
+      },
+      port: 8080, //tells us its on port 8080
+    },
 }
