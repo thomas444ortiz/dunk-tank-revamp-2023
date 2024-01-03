@@ -2,12 +2,34 @@ const express = require('express'); //import express
 const app = express();
 const path = require('path');
 
+//import our routes here
+const signupRouter = require('./routes/signup');
+
+/*---> EVERYTHING BELOW HERE TAKES IN REQUESTS FROM THE SERVER, DOES SOMETHING, AND RESPONDS <---*/
+
 //serve everything from the build folder
-// console.log(path.join(__dirname, '../build'));
 app.use('/build', express.static(path.join(__dirname, '../build')));
-// serve index.html on the route '/'
+//serve index.html to any get request on the path '/'
 app.get('/', (req, res) => {
     return res.status(200).sendFile(path.join(__dirname, '../index.html'));
 });
 
-app.listen(3000); //listens on port 3000 -> http://localhost:3000/  
+//define our signup route handler. all logic can be found in the signup.js file in the routes folder
+app.use('/signup', signupRouter);
+
+// catch-all route handler for any requests to an unknown route
+app.use((req, res) => res.status(404).send('This is not the page you\'re looking for...'));
+
+//define global error handler
+app.use((err, req, res, next) => {
+    const defaultErr = {
+      log: 'Express error handler caught unknown middleware error',
+      status: 500,
+      message: { err: 'An error occurred' },
+    };
+    const errorObj = Object.assign({}, defaultErr, err);
+    console.log(errorObj.log);
+    return res.status(errorObj.status).json(errorObj.message);
+  });
+
+app.listen(3000);
