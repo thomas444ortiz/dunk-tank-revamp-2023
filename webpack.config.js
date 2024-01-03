@@ -10,7 +10,7 @@ module.exports = {
         publicPath: '/build/', //specifies the base path for all assets in the application
     },
 
-    mode: 'production',
+    mode: 'production', 
     module:{
       rules: [
         {
@@ -22,6 +22,18 @@ module.exports = {
               presets: ['@babel/preset-env', '@babel/preset-react']
             }
           }
+        },
+        {
+          test: /\.scss$/,
+          exclude: /node_modules/,
+          use: [
+            // Creates `style` nodes from JS strings
+            "style-loader",
+            // Translates CSS into CommonJS
+            "css-loader",
+            // Compiles Sass to CSS
+            "sass-loader",
+          ],
         }
       ],
     }
