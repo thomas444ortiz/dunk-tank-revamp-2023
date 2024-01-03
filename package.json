@@ -4,6 +4,8 @@
   "description": "Solo Project",
   "main": "index.js",
   "scripts": {
+    "start": "node server/server.js",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -28,6 +30,7 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "server": "^1.0.38"
   }
 }
