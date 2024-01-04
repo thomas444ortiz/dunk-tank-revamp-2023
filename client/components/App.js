@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Signup from './Signup'
 import Header from './Header'
 import AllUsers from './AllUsers'
+import Feed from './Feed'
+import Login from './Login'
 
 //define our main app component here
 class App extends Component {
@@ -9,7 +11,8 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <Signup />     
+                <Signup />   
+                <Login />  
                 <AllUsers />           
             </div>
         )

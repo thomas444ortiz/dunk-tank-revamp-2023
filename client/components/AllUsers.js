@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 const AllUsers = () => {
     const [users, setUsers] = useState([]);
 
-
     useEffect(()=>{
         //fetch the user data
         fetch('/signup', {

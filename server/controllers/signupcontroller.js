@@ -15,6 +15,7 @@ signupController.getAllUsers = (req, res, next) => {
 
 //create a function to create a new user
 signupController.createUser = (req, res, next) => {
+    if(req.body.username === '' || req.body.password === '') return next('username or password not provided');
     models.User.create({username: `${req.body.username}`, password: `${req.body.password}`})
     .then((data) => {
         res.locals.data = data;
