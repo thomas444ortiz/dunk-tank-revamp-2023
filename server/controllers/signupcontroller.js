@@ -11,7 +11,7 @@ signupController.getAllUsers = (req, res, next) => {
 
 //create a function to create a new user
 signupController.createUser = (req, res, next) => {
-    res.locals.data = 'hardcoded'
+    res.locals.data = 'hardcoded nodemon'
 
     // console.log(models.User.insertOne);
 
