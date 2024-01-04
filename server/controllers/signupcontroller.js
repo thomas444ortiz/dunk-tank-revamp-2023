@@ -1,3 +1,5 @@
+const models = require('../models/userModels');
+
 //create an object that will store the middleware functions as methods, so we can export later
 const signupController = {};
 
@@ -9,7 +11,14 @@ signupController.getAllUsers = (req, res, next) => {
 
 //create a function to create a new user
 signupController.createUser = (req, res, next) => {
-    res.locals.data = req.body;
+    res.locals.data = 'hardcoded'
+    
+    // models.User.insertOne({username: req.body.username, password: req.body.password})
+    // .then((data)=> {
+    //     res.locals.body = data;
+    //     return next();
+    // })
+    // .catch(err => next(err));
     next();
 }
 
