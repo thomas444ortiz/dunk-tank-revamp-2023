@@ -43,9 +43,8 @@ module.exports = {
         directory: path.join(__dirname), //pulls all the info from the main directory (instead of build directory) for dev server
       },
       proxy: {
-        '/api': {
+        '/': {
           target: 'http://localhost:3000',
-          pathRewrite: { '^/api': '' },
         },
       },
       port: 8080, //tells us its on port 8080

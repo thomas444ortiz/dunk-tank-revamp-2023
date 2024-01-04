@@ -18,7 +18,7 @@ const Signup = () => {
         pass.value = "";
         
         //make api call to send to 3000
-        fetch('/api/signup', {
+        fetch('/signup', {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
