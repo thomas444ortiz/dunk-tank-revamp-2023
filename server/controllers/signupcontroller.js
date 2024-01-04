@@ -12,10 +12,12 @@ signupController.getAllUsers = (req, res, next) => {
 //create a function to create a new user
 signupController.createUser = (req, res, next) => {
     res.locals.data = 'hardcoded'
-    
+
+    // console.log(models.User.insertOne);
+
     // models.User.insertOne({username: req.body.username, password: req.body.password})
     // .then((data)=> {
-    //     res.locals.body = data;
+    //     console.log(data);
     //     return next();
     // })
     // .catch(err => next(err));
