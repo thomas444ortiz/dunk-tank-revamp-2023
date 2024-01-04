@@ -18,6 +18,18 @@ app.get('/', (req, res) => {
     return res.status(200).sendFile(path.join(__dirname, '../index.html'));
 });
 
+app.get('/join', (req, res) => {
+  return res.status(200).sendFile(path.join(__dirname, '../index.html'));
+});
+
+app.get('/loginuser', (req, res) => {
+  return res.status(200).sendFile(path.join(__dirname, '../index.html'));
+});
+
+app.get('/admin', (req, res) => {
+  return res.status(200).sendFile(path.join(__dirname, '../index.html'));
+});
+
 //define our signup route handler. all logic can be found in the signup.js file in the routes folder
 app.use('/signup', signupRouter);
 app.use('/login', loginRouter);

@@ -39,6 +39,7 @@
     "mongoose": "^8.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1",
     "server": "^1.0.38",
     "Webpack-dev-server": "npm:webpack-dev-server@^4.15.1"
   }
