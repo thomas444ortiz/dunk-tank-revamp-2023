@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     min-height: 10%;
-    background-color: rgb(141, 0, 148);
+    background-color: rgb(106, 2, 111);
 }
 
 .signup-page{
@@ -69,4 +69,9 @@ body {
 
 #logged-in {
     color: red;
+}
+
+.header-text {
+    color: white;
+    font-size: 20px;
 }

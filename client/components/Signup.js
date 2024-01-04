@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 //define our main app component here
 const Signup = () => {
     //create an event handler to handle when the form is submitted
@@ -26,8 +27,7 @@ const Signup = () => {
             body: JSON.stringify(body),            
         })
         .then((response) => response.json())
-        .then((data) => console.log(data));
-        //
+        .then((data) => console.log(data))
     }
 
     return (

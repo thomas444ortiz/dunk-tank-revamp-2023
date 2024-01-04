@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 const Header = () => {
     return (
     <div className='header'>
-        <div>Welcome To Dunk Tank</div>
-        <div>Your Location</div>
-        <div>Your Profile</div>
+        <div class="header-text">Welcome To Dunk Tank</div>
+        <div class="header-text">Location Information Goes Here</div>
+        <div class="header-text">Profile Information Goes Here</div>
     </div> 
     )
 }

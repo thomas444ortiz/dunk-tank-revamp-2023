@@ -34,6 +34,7 @@ const Login = () => {
                 login.innerHTML = `You are logged in as ${data.username}`;                
             }
             else {
+                login.style.color = 'red';
                 login.innerHTML = `Login unsuccessful, try again`; 
             }
         })
