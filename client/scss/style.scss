@@ -1,7 +1,40 @@
 body {
     background: rgb(228, 228, 253);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
-h1{
-    color: darkblue;
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 10%;
+    background-color: rgb(141, 0, 148);
+}
+
+.signup-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+}
+
+.signup-box {
+    display: flex;
+    flex-direction: column;
+    min-width: 30%;
+    max-width: 700px;
+    background-color: rgb(210, 210, 210);
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
 }

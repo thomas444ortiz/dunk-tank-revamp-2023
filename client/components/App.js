@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import Signup from './Signup'
-
+import Header from './Header'
 //define our main app component here
 class App extends Component {
     render() {
         return (
-            <Signup />
+            <div>
+                <Header />
+                <Signup />                
+            </div>
         )
     }
 }

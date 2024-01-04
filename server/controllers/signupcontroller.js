@@ -15,16 +15,12 @@ signupController.getAllUsers = (req, res, next) => {
 
 //create a function to create a new user
 signupController.createUser = (req, res, next) => {
-    console.log(req.body);
-
     models.User.create({username: `${req.body.username}`, password: `${req.body.password}`})
     .then((data) => {
-        console.log('inserted')
         res.locals.data = data;
         return next();
     })
     .catch(err => {
-        console.log(err);
         return next(err)
     })
 }

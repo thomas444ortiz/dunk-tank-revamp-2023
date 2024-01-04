@@ -30,14 +30,16 @@ const Signup = () => {
     }
 
     return (
-    <div>
-        <div>Signup Below</div>
-        <form onSubmit = {handleSubmit}>
-            <input type='text' id={'username-input'}/>
-            <input type='text' id={'password-input'}/>
-            <input type='submit'/>
-        </form>
-    </div> 
+    <div className="signup-page">
+        <div className="signup-box">
+            <div>Signup Below</div>
+            <form onSubmit = {handleSubmit}  className="signup-form">
+                <input type='text' id={'username-input'}/>
+                <input type='text' id={'password-input'}/>
+                <input type='submit'/>
+            </form>
+        </div> 
+    </div>
     )
 }
 
