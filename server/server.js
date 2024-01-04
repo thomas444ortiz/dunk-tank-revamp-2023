@@ -6,6 +6,9 @@ const path = require('path');
 const signupRouter = require('./routes/signup');
 
 /*---> EVERYTHING BELOW HERE TAKES IN REQUESTS FROM THE SERVER, DOES SOMETHING, AND RESPONDS <---*/
+app.use(express.json()); //parses all json requests automatically
+app.use(express.urlencoded()); //parses incoming requests with URL-encoded payloads
+
 
 //serve everything from the build folder
 app.use('/build', express.static(path.join(__dirname, '../build')));

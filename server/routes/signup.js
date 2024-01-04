@@ -9,7 +9,8 @@ const signupController = require('../controllers/signupcontroller');
 router.get('/',
     signupController.getAllUsers,
     (req, res) => {
-        res.status(200).send(res.locals.data);
+        // console.log(res.locals.data);
+        return res.status(200).json(res.locals.data);
     }
 );
 
@@ -17,7 +18,7 @@ router.get('/',
 router.post('/',
     signupController.createUser,
     (req, res) => {
-        res.status(200).send(res.locals.data);
+        return res.status(200).json(res.locals.data);
     }
 );
 
@@ -25,7 +26,8 @@ router.post('/',
 router.patch('/',
     signupController.updateUser,
     (req, res) => {
-        res.status(200).send(res.locals.data);
+        // console.log(res.locals.data);
+        return res.status(200).json(res.locals.data);
     }
 );
 
@@ -33,7 +35,8 @@ router.patch('/',
 router.delete('/',
     signupController.deleteUser,
     (req, res) => {
-        res.status(200).send(res.locals.data);
+        // console.log(res.locals.data);
+        return res.status(200).json(res.locals.data);
     }
 );
 

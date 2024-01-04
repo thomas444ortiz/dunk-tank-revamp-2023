@@ -9,7 +9,7 @@ signupController.getAllUsers = (req, res, next) => {
 
 //create a function to create a new user
 signupController.createUser = (req, res, next) => {
-    res.locals.data = "placeholder for data, create new user worked"
+    res.locals.data = req.body;
     next();
 }
 
