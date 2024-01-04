@@ -32,11 +32,11 @@ const Signup = () => {
     return (
     <div className="signup-page">
         <div className="signup-box">
-            <div>Signup Below</div>
             <form onSubmit = {handleSubmit}  className="signup-form">
-                <input type='text' id={'username-input'}/>
-                <input type='text' id={'password-input'}/>
-                <input type='submit'/>
+                <h3 className="signup-text">Signup Below</h3>                
+                <input type='text' id={'username-input'} className="signup-input"/>
+                <input type='text' id={'password-input'} className="signup-input"/>
+                <input type='submit' className="submit-button"/>
             </form>
         </div> 
     </div>
